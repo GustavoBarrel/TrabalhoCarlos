@@ -1,4 +1,6 @@
 using UnityEngine;
+using TMPro;
+using System;
 
 public class PlayerMovement : MonoBehaviour
 {
@@ -8,9 +10,13 @@ public class PlayerMovement : MonoBehaviour
     private Rigidbody2D rb;
     private Animator animator;
     private bool isGrounded;
+    private bool inwall;
     private bool isDashing;
 
     private Vector3 dashTarget;      // Posição final do dash
+
+    public TextMeshProUGUI counterText;  // Referência ao TextMeshProUGUI para o contador
+    private float groundTimeCounter = 0f;  // Tempo em que o jogador está no chão
 
     void Start()
     {
@@ -29,13 +35,31 @@ public class PlayerMovement : MonoBehaviour
             transform.localScale = new Vector3(-1f, 1f, 1f);  // Virar para a esquerda
 
         isGrounded = Physics2D.OverlapCircle(transform.position, 0.7f, LayerMask.GetMask("Ground"));
+        inwall = Physics2D.OverlapCircle(transform.position, 0.7f, LayerMask.GetMask("wall"));
+
+        if (inwall)
+        {
+            Debug.Log("em contato com a parede");
+
+        }
+        if (inwall && Input.GetKeyDown(KeyCode.Space))
+        {
+            Debug.Log("wtf");
+            Jump();
+        }
+
+        if (Input.GetMouseButtonDown(0) && !inwall && !isDashing && !isGrounded)
+        {
+            StartDash();
+        }
 
         UpdateAnimations(moveInput);
+        UpdateCounter();
 
         if (isGrounded && Input.GetKeyDown(KeyCode.Space))
             Jump();
 
-        if (Input.GetMouseButtonDown(0) && !isGrounded && !isDashing)
+        if (Input.GetMouseButtonDown(0) && !isGrounded && !isDashing && !inwall)
             StartDash();
 
         // Movimento para a posição final do dash enquanto estiver em dash
@@ -88,5 +112,23 @@ public class PlayerMovement : MonoBehaviour
     {
         animator.SetBool("DashAnimation", false);
         isDashing = false;
+    }
+
+    void UpdateCounter()
+    {
+        if (isGrounded)
+        {
+            groundTimeCounter += Time.deltaTime;
+            counterText.text = groundTimeCounter.ToString("00.00");
+        }
+    }
+
+    void OnCollisionEnter2D(Collision2D collision)
+    {
+        // Se o personagem colidir com algo enquanto está realizando o dash, termine o dash
+        if (isDashing)
+        {
+            EndDash();
+        }
     }
 }
