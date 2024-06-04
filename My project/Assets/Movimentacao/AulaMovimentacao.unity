@@ -4494,7 +4494,7 @@ MonoBehaviour:
   speed: 5
   jumpForce: 5
   dashDistance: 3
-  counterText: {fileID: 0}
+  counterText: {fileID: 1828335024}
 --- !u!50 &666379966
 Rigidbody2D:
   serializedVersion: 4
@@ -6878,7 +6878,7 @@ GameObject:
   - component: {fileID: 1828335025}
   - component: {fileID: 1828335024}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: counterText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -6900,7 +6900,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 252.3, y: -179.3}
+  m_AnchoredPosition: {x: 225, y: -163.19998}
   m_SizeDelta: {x: 200, y: 50}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1828335024
