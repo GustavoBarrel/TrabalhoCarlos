@@ -2751,7 +2751,7 @@ MonoBehaviour:
   m_OnCullStateChanged:
     m_PersistentCalls:
       m_Calls: []
-  m_text: NOME DO JOGO
+  m_text: "Don\u2019t stop moving"
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 7e3ea0352783ba440a7b47a884412714, type: 2}
   m_sharedMaterial: {fileID: 8057712347161654851, guid: 7e3ea0352783ba440a7b47a884412714, type: 2}
@@ -2784,7 +2784,7 @@ MonoBehaviour:
   m_enableAutoSizing: 0
   m_fontSizeMin: 18
   m_fontSizeMax: 72
-  m_fontStyle: 0
+  m_fontStyle: 16
   m_HorizontalAlignment: 2
   m_VerticalAlignment: 512
   m_textAlignment: 65535
@@ -2814,7 +2814,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0.6777344, y: 0, z: 0, w: 0}
+  m_margin: {x: -46.54962, y: 0, z: -43.77173, w: 0}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
