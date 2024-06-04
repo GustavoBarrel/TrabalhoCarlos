@@ -22,9 +22,8 @@ public class GameController : MonoBehaviour
         canvas.worldCamera = novaCamera;
     }
 
-    public void RestartGame() {
+   public void RestartGame() {
         Debug.Log("ok");
         SceneManager.LoadScene(2);
-        
     }
 }

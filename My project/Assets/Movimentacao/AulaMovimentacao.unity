@@ -514,8 +514,7 @@ Transform:
   m_LocalPosition: {x: -0.09, y: -3.68, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
-  m_Children:
-  - {fileID: 1985587740}
+  m_Children: []
   m_Father: {fileID: 958085085}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -179.896}
 --- !u!1 &90594971
@@ -1774,7 +1773,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2009964409}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &179244785
 TilemapRenderer:
@@ -2292,7 +2291,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2009964409}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &193349887
 TilemapRenderer:
@@ -3853,7 +3852,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1856618681}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &562605487
 GameObject:
@@ -4621,6 +4620,7 @@ GameObject:
   - component: {fileID: 666379965}
   - component: {fileID: 666379967}
   - component: {fileID: 666379968}
+  - component: {fileID: 666379969}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -4806,6 +4806,102 @@ Animator:
   m_AllowConstantClipSamplingOptimization: 1
   m_KeepAnimatorStateOnDisable: 0
   m_WriteDefaultValuesOnDisable: 0
+--- !u!82 &666379969
+AudioSource:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 666379962}
+  m_Enabled: 1
+  serializedVersion: 4
+  OutputAudioMixerGroup: {fileID: 0}
+  m_audioClip: {fileID: 8300000, guid: 65fc3fdc4287cf94c90593e9e41ab4e9, type: 3}
+  m_PlayOnAwake: 1
+  m_Volume: 1
+  m_Pitch: 1
+  Loop: 1
+  Mute: 0
+  Spatialize: 0
+  SpatializePostEffects: 0
+  Priority: 128
+  DopplerLevel: 1
+  MinDistance: 1
+  MaxDistance: 500
+  Pan2D: 0
+  rolloffMode: 0
+  BypassEffects: 0
+  BypassListenerEffects: 0
+  BypassReverbZones: 0
+  rolloffCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    - serializedVersion: 3
+      time: 1
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  panLevelCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  spreadCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 0
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
+  reverbZoneMixCustomCurve:
+    serializedVersion: 2
+    m_Curve:
+    - serializedVersion: 3
+      time: 0
+      value: 1
+      inSlope: 0
+      outSlope: 0
+      tangentMode: 0
+      weightedMode: 0
+      inWeight: 0.33333334
+      outWeight: 0.33333334
+    m_PreInfinity: 2
+    m_PostInfinity: 2
+    m_RotationOrder: 4
 --- !u!1 &666416693
 GameObject:
   m_ObjectHideFlags: 0
@@ -8702,7 +8798,6 @@ Transform:
   - {fileID: 405640145}
   - {fileID: 1894498311}
   - {fileID: 1555122920}
-  - {fileID: 1863271015}
   - {fileID: 83471468}
   - {fileID: 1210791528}
   - {fileID: 2024874939}
@@ -8960,7 +9055,7 @@ Transform:
   m_LocalScale: {x: 0.8, y: 0.8, z: 0}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 635510010}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -360.202}
 --- !u!114 &1057537315
 MonoBehaviour:
@@ -8974,8 +9069,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: ca124faa8cace6c449f33620f23abf81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pointA: {fileID: 974181987}
-  pointB: {fileID: 1662841376}
+  pointA: {fileID: 0}
+  pointB: {fileID: 0}
   speed: 2
 --- !u!50 &1057537316
 Rigidbody2D:
@@ -9282,7 +9377,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1856618681}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1102179224
 GameObject:
@@ -10352,7 +10447,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2009964409}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1188263161
 TilemapRenderer:
@@ -11282,7 +11377,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &1256965851
 RectTransform:
   m_ObjectHideFlags: 0
@@ -12901,7 +12996,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 2009964409}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!483693784 &1568570890
 TilemapRenderer:
@@ -19752,7 +19847,7 @@ Transform:
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_ConstrainProportionsScale: 0
   m_Children: []
-  m_Father: {fileID: 1863271015}
+  m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!212 &2114374609
 SpriteRenderer:
@@ -19823,5 +19918,22 @@ SceneRoots:
   - {fileID: 1475185107}
   - {fileID: 1363102733}
   - {fileID: 116398046}
-  - {fileID: 635510010}
   - {fileID: 573714420}
+  - {fileID: 51483305}
+  - {fileID: 90594976}
+  - {fileID: 139538218}
+  - {fileID: 168399519}
+  - {fileID: 179244784}
+  - {fileID: 193349886}
+  - {fileID: 554936724}
+  - {fileID: 666416695}
+  - {fileID: 880399029}
+  - {fileID: 1057537314}
+  - {fileID: 1088418993}
+  - {fileID: 1170998157}
+  - {fileID: 1188263160}
+  - {fileID: 1351045574}
+  - {fileID: 1389937073}
+  - {fileID: 1568570889}
+  - {fileID: 1813795190}
+  - {fileID: 2114374608}
