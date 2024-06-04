@@ -6,7 +6,7 @@ public class PlayerMovement : MonoBehaviour
     public float speed = 1f;         // Velocidade de movimento do personagem
     public float jumpForce = 5f;     // Força do pulo
     public float dashDistance = 3f;  // Distância máxima do dash
-    public float dashSpeed = 10f;    // Velocidade do dash
+    public float dashSpeed = 100f;   // Velocidade do dash (ajuste conforme necessário)
 
     private Rigidbody2D rb;
     private Animator animator;
@@ -19,6 +19,14 @@ public class PlayerMovement : MonoBehaviour
 
     public TextMeshProUGUI counterText;  // Referência ao TextMeshProUGUI para o contador
     private float groundTimeCounter = 0f;  // Tempo em que o jogador está no chão
+
+    private bool isOnPlatform = false;  // Indica se o jogador está em cima da plataforma
+
+    public bool IsOnPlatform
+    {
+        get { return isOnPlatform; }
+        set { isOnPlatform = value; }
+    }
 
     void Start()
     {
@@ -38,6 +46,7 @@ public class PlayerMovement : MonoBehaviour
 
         isGrounded = Physics2D.OverlapCircle(transform.position, 0.7f, LayerMask.GetMask("Ground"));
         inwall = Physics2D.OverlapCircle(transform.position, 0.7f, LayerMask.GetMask("wall"));
+
 
         if (inwall)
         {
@@ -123,19 +132,26 @@ public class PlayerMovement : MonoBehaviour
 
     void UpdateCounter()
     {
-        if (isGrounded)
+        if (isGrounded || isOnPlatform)
         {
             groundTimeCounter += Time.deltaTime;
-            counterText.text = groundTimeCounter.ToString("00.00");
+            int seconds = Mathf.FloorToInt(groundTimeCounter);
+            int milliseconds = Mathf.FloorToInt((groundTimeCounter - seconds) * 100);
+            counterText.text = string.Format("{0:00}.{1:00}", seconds, milliseconds);
         }
     }
 
     void OnCollisionEnter2D(Collision2D collision)
     {
-        // Se o personagem colidir com algo enquanto está realizando o dash, termine o dash
         if (isDashing)
         {
             EndDash();
+        }
+
+        // Se o personagem colidir com uma parede enquanto está no ar, redefina a capacidade de dash
+        if (collision.gameObject.layer == LayerMask.NameToLayer("wall") && !isGrounded)
+        {
+            hasDashed = false;
         }
     }
 }
