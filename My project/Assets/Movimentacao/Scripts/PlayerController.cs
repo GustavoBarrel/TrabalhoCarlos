@@ -22,9 +22,6 @@ public class PlayerController : MonoBehaviour
         Debug.Log("update");
 
     }
-    public void RestartGame(string lvlName) {
-        
-        SceneManager.LoadScene(lvlName);
-    }
+  
    
 }

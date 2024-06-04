@@ -22,6 +22,8 @@ public class PlayerMovement : MonoBehaviour
 
     private bool isOnPlatform = false;  // Indica se o jogador está em cima da plataforma
 
+    public GameController GameController;
+
     public bool IsOnPlatform
     {
         get { return isOnPlatform; }
@@ -138,6 +140,10 @@ public class PlayerMovement : MonoBehaviour
             int seconds = Mathf.FloorToInt(groundTimeCounter);
             int milliseconds = Mathf.FloorToInt((groundTimeCounter - seconds) * 100);
             counterText.text = string.Format("{0:00}.{1:00}", seconds, milliseconds);
+
+            if (seconds >= 10) {
+              GameController.AbrirGameOver();
+            }
         }
     }
 
