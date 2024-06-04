@@ -5,13 +5,13 @@ using UnityEngine.SceneManagement;
 
 public class MenuController : MonoBehaviour
 {   
-    [SerializeField] private string nomeDoLevelDoJogo;
+    [SerializeField] private string AulaMovimentacao;
     [SerializeField] private GameObject painelMenuInicial;
     [SerializeField] private GameObject painelOpcoes;
 
     public void Jogar() {
 
-        SceneManager.LoadScene(nomeDoLevelDoJogo);
+        SceneManager.LoadScene("AulaMovimentacao");
     }
 
     public void AbrirOpcoes() {

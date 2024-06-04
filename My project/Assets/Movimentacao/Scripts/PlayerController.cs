@@ -23,6 +23,7 @@ public class PlayerController : MonoBehaviour
 
     }
     public void RestartGame(string lvlName) {
+        
         SceneManager.LoadScene(lvlName);
     }
    
